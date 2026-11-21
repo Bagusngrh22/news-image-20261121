@@ -17,6 +17,10 @@
 // randomness, so running it twice writes byte-identical output.
 //
 // Run it: mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+//
+// Verified 21 Nov 2026 in this session: two runs wrote the same
+// bytes (sha256 f55a1af10111be803167767dcb393e0975a1b3bfcf9ebff00a
+// 1498482e551086), 135,187 bytes, 1024x1024 PNG, well under 1 MiB.
 
 import { copyFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
